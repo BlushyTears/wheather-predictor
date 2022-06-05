@@ -21,7 +21,7 @@ fn generate_data() -> std::vec::Vec<[WeatherTable; 1]> {
     let w_t = [
         WeatherTable {
             day: 0 as u8,
-            info: "Very Windy!".to_string(),
+            info: "Very windy!".to_string(),
         }
     ];
     vec_struct.push(w_t);
@@ -54,7 +54,7 @@ fn generate_data() -> std::vec::Vec<[WeatherTable; 1]> {
     vec_struct
 }
 
-// Let X be the day, and Y be hotness. As X increases, so does the weather comments in hotness
+// Let X be the day, and Y be hotness. As X increases, so does the weather labels in described hotness
 // Instructions: Take in Z number of unordered elements of X and Y
 // And predict Y with respect to X by returning a comment as closely in relevance to 
 // Also print the statistical outcome of all weathers: Eg: "0.1% of very windy", "3% of very sunny"...
@@ -68,7 +68,6 @@ fn predict_outcome(data: std::vec::Vec<[WeatherTable; 1]>, uguess: u8) -> String
     let mut vec = Vec::new();
     let mut clamp_lower = 0;
     let mut clamp_higher = 0;
-    
     
     for i in data {
         vec.push(i[0].day);
