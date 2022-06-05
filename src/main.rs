@@ -89,7 +89,8 @@ fn predict_outcome(data: std::vec::Vec<[WeatherTable; 1]>, uguess: u8) -> String
             }
         }
     }
-
+    
+    // Used for debugging purposes
     for i in 0..20 {
         println!("first twenty: {}", vec[i]);
     }
