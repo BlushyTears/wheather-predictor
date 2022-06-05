@@ -12,8 +12,6 @@ struct WeatherTable {
     info: String,
 }
 
-const MARGIN: usize = 7;
-
 // Might want to return reference and give read-only soon
 fn generate_data() -> std::vec::Vec<[WeatherTable; 1]> {
 
@@ -27,7 +25,6 @@ fn generate_data() -> std::vec::Vec<[WeatherTable; 1]> {
         }
     ];
     vec_struct.push(w_t);
-
 
     for i in 0..50 {
         let mut rng = rand::thread_rng();
@@ -117,7 +114,6 @@ fn predict_outcome(data: std::vec::Vec<[WeatherTable; 1]>, uguess: u8) -> String
 
     default_ans
 }
-
 
 fn main() {
     let s = generate_data();
