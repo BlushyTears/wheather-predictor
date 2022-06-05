@@ -59,10 +59,6 @@ fn generate_data() -> std::vec::Vec<[WeatherTable; 1]> {
 // And predict Y with respect to X by returning a comment as closely in relevance to 
 // Also print the statistical outcome of all weathers: Eg: "0.1% of very windy", "3% of very sunny"...
 
-// Concrete implementation: Insert table[1, "Very Windy"], 
-
-// Algorithmic implementation: Count the steps in sortered table from 
-
 fn predict_outcome(data: std::vec::Vec<[WeatherTable; 1]>, uguess: u8) -> String{
     let mut default_ans = String::from("Default");
     let mut vec = Vec::new();
@@ -79,8 +75,6 @@ fn predict_outcome(data: std::vec::Vec<[WeatherTable; 1]>, uguess: u8) -> String
         if uguess > vec[i] {
             for j in 1..vec.len(){
                 if uguess < vec[j] {
-                    // Not the perfect solution because this nested
-                    // loop is ran more than once but does the job
                     clamp_lower = vec[i];
                     clamp_higher = vec[j];
                     break;
