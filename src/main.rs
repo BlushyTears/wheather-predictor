@@ -1,8 +1,8 @@
 
-// Basic neural network: Take in value X to guess value Y: If X is somewhat cloudy then it's somewhat likely to rain
+// Implementation: Take in value X to guess value Y: If X is somewhat cloudy then it's somewhat likely to rain
 // X is a value from 0 (Very cloudy) to 1 (Very sunny) and Y is a statistical classification that guesses the probability
-// of it being a certain wheather. It takes the most likely one.
-// Input(0-256) -> Output("There's a 71% chance of it being very cloudy")
+// of it being a certain wheather condition. It takes the most likely one to represent first.
+// Input(some number between 0-256) -> Output("There's a 71% chance of it being very cloudy")
 
 use rand::prelude::*;
 
