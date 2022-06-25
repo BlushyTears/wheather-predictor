@@ -4,6 +4,8 @@
 // of it being a certain wheather condition. It takes the most likely one to represent first.
 // Input(some number between 0-256) -> Output("There's a 71% chance of it being very cloudy")
 
+// asd
+
 use rand::prelude::*;
 
 #[derive(Debug)]
